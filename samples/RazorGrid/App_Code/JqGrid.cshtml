@@ -1,0 +1,22 @@
+﻿@inherits RazorGrid.Example.App_Code.HelperPage
+@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@using RazorGrid.Model;
+
+@helper Render(string caption, JqGridOptions options)
+    {
+    <table id="grid">
+    </table>
+    <div id="pager">
+    </div>
+    <script type="text/javascript" language="javascript">
+        jQuery("#grid").jqGrid({
+            @Html.Raw(options.ToJson().Trim('{', '}')),
+            pager: "#pager",
+            width: 700,
+            height: 100,
+            caption: "@caption"
+        });
+        jQuery("#grid").jqGrid('navGrid', '#pager', { edit: false, add: false, del: false }); 
+    </script>
+}

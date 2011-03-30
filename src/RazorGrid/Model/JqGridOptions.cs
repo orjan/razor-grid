@@ -44,12 +44,8 @@ namespace RazorGrid.Model
 
         [DataMember(Name = "url")]
         public string Url { get; set; }
-
-        [DataMember(Name = "caption")]
-        public string Caption { get; set; }
-
+        
         /* Site specific data */
-
         [DataMember(Name = "datatype")]
         public string DataType { get; set; }
 

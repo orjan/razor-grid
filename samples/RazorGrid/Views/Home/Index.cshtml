@@ -1,29 +1,10 @@
 ﻿@using RazorGrid.Model;
 @{
     ViewBag.Title = "Index";
-    // Model.Caption = "Simple Logs";
 }
 <h2>Index</h2>
 
-@JqGrid(
+@JqGrid.Render(
     caption: "Simple logs",
     options: @Model
 )
-
-@helper JqGrid(string caption, JqGridOptions options)
-    {
-    <table id="grid">
-    </table>
-    <div id="pager">
-    </div>
-    <script type="text/javascript" language="javascript">
-        jQuery("#grid").jqGrid({
-            @Html.Raw(options.ToJson().Trim('{', '}')),
-            pager: "#pager",
-            width: 700,
-            height: 100,
-            caption: "@caption"
-        });
-        jQuery("#grid").jqGrid('navGrid', '#pager', { edit: false, add: false, del: false }); 
-    </script>
-}
