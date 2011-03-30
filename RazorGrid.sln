@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorGrid.Example", "samples\RazorGrid\RazorGrid.Example.csproj", "{53B53142-38FC-4C47-971E-32DEB7F82F79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorGrid", "src\RazorGrid\RazorGrid.csproj", "{6C1B9FAE-1AAC-4A97-ABE8-0A228C91546F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53B53142-38FC-4C47-971E-32DEB7F82F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B53142-38FC-4C47-971E-32DEB7F82F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B53142-38FC-4C47-971E-32DEB7F82F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B53142-38FC-4C47-971E-32DEB7F82F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C1B9FAE-1AAC-4A97-ABE8-0A228C91546F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1B9FAE-1AAC-4A97-ABE8-0A228C91546F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1B9FAE-1AAC-4A97-ABE8-0A228C91546F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1B9FAE-1AAC-4A97-ABE8-0A228C91546F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
