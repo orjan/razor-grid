@@ -40,7 +40,5 @@ namespace RazorGrid
         public int Rows { get; set; }
         public bool Ascending { get; set; }
         public string OrderBy { get; set; }
-        // public string SortColumn { get; set; }
-        // public string SortOrder { get; set; }
     }
 }
