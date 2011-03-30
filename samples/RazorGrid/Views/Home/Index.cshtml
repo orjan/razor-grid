@@ -1,7 +1,7 @@
-﻿@using RazorGrid;
+﻿@using RazorGrid.Model;
 @{
     ViewBag.Title = "Index";
-    Model.Caption = "Simple Logs";
+    // Model.Caption = "Simple Logs";
 }
 <h2>Index</h2>
 
@@ -21,7 +21,8 @@
             @Html.Raw(options.ToJson().Trim('{', '}')),
             pager: "#pager",
             width: 700,
-            height: 100
+            height: 100,
+            caption: "@caption"
         });
         jQuery("#grid").jqGrid('navGrid', '#pager', { edit: false, add: false, del: false }); 
     </script>

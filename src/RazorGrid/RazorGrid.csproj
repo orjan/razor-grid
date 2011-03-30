@@ -44,11 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Column.cs" />
-    <Compile Include="ColumnModel.cs" />
     <Compile Include="JqGridData.cs" />
     <Compile Include="JqGridFilter.cs" />
     <Compile Include="JqGridJsonResult.cs" />
-    <Compile Include="JqGridOptions.cs" />
+    <Compile Include="Model\ColumnModel.cs" />
+    <Compile Include="Model\JqGridOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

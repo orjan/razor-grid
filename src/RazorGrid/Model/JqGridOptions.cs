@@ -4,9 +4,9 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
 
-namespace RazorGrid
+namespace RazorGrid.Model
 {
-    /*
+    /* Example configuration of jqGrid
             url: '/home/griddata',
             datatype: "json",
             colNames: ['Id', 'Date', 'Message'],
@@ -21,7 +21,7 @@ namespace RazorGrid
             pager: '#pager',
             sortname: 'id',
             sortorder: "desc",
-            caption: "@caption"
+            caption: "My listing"
      */
 
     [DataContract]
@@ -35,12 +35,12 @@ namespace RazorGrid
             DataType = "json";
             Mtype = "POST";
             RowNum = 10;
-            RowList = new List<int> {10, 20, 30};
+            RowList = new List<int> { 10, 20, 30 };
 
             Url = url;
         }
 
-        /* Needs to be specied every time */
+        /* Needs to be specified every time */
 
         [DataMember(Name = "url")]
         public string Url { get; set; }
@@ -76,12 +76,8 @@ namespace RazorGrid
             get { return columnModels; }
         }
 
-        /* View specific data */
-
-        [DataMember(Name = "pager")]
-        public string Pager { get; set; }
-
         /// <summary>
+        /// Converts the view model to a Json string appropriate for configuration of jqGrid 
         /// http://pietschsoft.com/post/2008/02/NET-35-JSON-Serialization-using-the-DataContractJsonSerializer.aspx
         /// </summary>
         /// <returns>Returns a Json serialized version of JqGridOptions</returns>
@@ -92,13 +88,5 @@ namespace RazorGrid
             serializer.WriteObject(ms, this);
             return Encoding.Default.GetString(ms.ToArray());
         }
-
-
-        /*
-         sortname
-         sortorder
-         [DataMember(Name = "sortname", EmitDefaultValue = false)]
-         
-         */
     }
 }
